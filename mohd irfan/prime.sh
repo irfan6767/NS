@@ -1,9 +1,10 @@
 #!/bin/bash
+
 for (( num=50;num<=100;num++ ))
-do 
+do
 	prime=1
-	
-	for((i=2;i<num/2;i++))
+
+	for ((i=2;i<num/2;i++))
 	do
 		if [ $((num%i)) -eq 0 ]
 		then
@@ -11,10 +12,11 @@ do
 			break
 		fi
 	done
-	
+
 	if [ $prime -eq 1 ] && [ $num -gt 1 ]
-	then
+	then 
 		echo $num
 	fi
-done   
+done
+
 
